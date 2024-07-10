@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.idleon.wiki'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // Scraping
+    implementation 'com.microsoft.playwright:playwright:1.44.0'
+
+    // Utilities
+    implementation 'com.google.guava:guava:33.2.1-jre'
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'io.github.classgraph:classgraph:4.8.174'
+
+    // Logging
+    implementation 'ch.qos.logback:logback-core:1.4.14'
+    implementation 'org.slf4j:slf4j-api:2.0.12'
+    implementation 'org.slf4j:slf4j-simple:2.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
