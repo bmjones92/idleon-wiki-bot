@@ -13,7 +13,7 @@ public class GendersParser extends DataTableParser<List<String>, GendersTable> {
 
     @Override
     protected GendersTable parseData(@NonNull List<String> input) {
-        return null;
+        return new GendersTable(input);
     }
 
 }

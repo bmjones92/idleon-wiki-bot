@@ -18,10 +18,10 @@ public class ColosseumInfoTable extends ArrayGameTable<ColosseumInfoTable.Coloss
      * @param x2 Unknown
      * @param ticketCost The number of tickets required to enter the colosseum.
      * @param x4 Unknown
+     * @param x5 Unknown
      * @param bronzeChestThreshold The point threshold to earn the first bronze chest.
      * @param silverChestThreshold The point threshold to earn the first silver chest.
      * @param goldChestThreshold The point threshold to earn the first gold chest.
-     * @param x8 Unknown
      * @param x9 Unknown
      * @param x10 Unknown
      * @param x11 Unknown
@@ -34,10 +34,10 @@ public class ColosseumInfoTable extends ArrayGameTable<ColosseumInfoTable.Coloss
             int x2,
             int ticketCost,
             int x4,
+            int x5,
             int bronzeChestThreshold,
             int silverChestThreshold,
             int goldChestThreshold,
-            int x8,
             int x9,
             int x10,
             int x11,

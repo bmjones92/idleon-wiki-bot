@@ -16,11 +16,12 @@ public class ClassFamilyBonusesParser extends DataTableParser<List<List<String>>
     @Override
     protected ClassFamilyBonusesTable parseData(@NonNull List<List<String>> input) {
         return new ClassFamilyBonusesTable(input.stream().map(bonus -> {
-            final var description = TextTransformers.TITLE.transform(bonus.get(0));
-            if (description.equals("no family bonus")) {
+            final var desc = bonus.get(0);
+            if (desc.equals("NO_FAMILY_BONUS") || desc.equals("FILLER")) {
                 return null;
             }
 
+            final var description = TextTransformers.TITLE.transform(desc);
             final var func1 = LavaMathFunc.parse(bonus, 1);
             final var func2 = LavaMathFunc.parse(bonus, 4);
 
