@@ -15,12 +15,20 @@ public class TextTransformers {
     /**
      * Preset for transforming text to a sentence format.
      */
-    public static final TextTransformer DESCRIPTION = TextTransformer.create()
+    public static final TextTransformer SENTENCE = TextTransformer.create()
+            .withSpaces()
+            .withCasing(TextTransformer.Casing.Preserve)
+            .build();
+
+    /**
+     * Preset for adding spaces to text.
+     */
+    public static final TextTransformer SPACES = TextTransformer.create()
             .withSpaces()
             .build();
 
     public static boolean parseBoolean(@NonNull String text) {
-        return text.equalsIgnoreCase("1");
+        return text.equals("1");
     }
 
 }

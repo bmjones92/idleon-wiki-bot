@@ -33,10 +33,10 @@ public class AlchemyDescriptionParser extends DataTableParser<List<List<List<Str
 
     private List<AlchemyBubble> parseCauldron(@NonNull List<List<String>> cauldron) {
         return cauldron.stream().map(bubble -> {
-           final var name = TextTransformers.TITLE.transform(bubble.get(0));
+            final var name = TextTransformers.TITLE.transform(bubble.get(0));
             final var func = LavaMathFunc.parse(bubble, 1);
             final var ingredients = parseItemQuantityPairs(bubble);
-            final var description = TextTransformers.DESCRIPTION.transform(bubble.get(9));
+            final var description = TextTransformers.SENTENCE.transform(bubble.get(9));
             final var isEquippable = TextTransformers.parseBoolean(bubble.get(10));
             final var bonus = bubble.get(15);
 
@@ -49,7 +49,7 @@ public class AlchemyDescriptionParser extends DataTableParser<List<List<List<Str
             final var name = TextTransformers.TITLE.transform(vial.get(0));
             final var func = LavaMathFunc.parse(vial, 1);
             final var ingredients = vial.subList(5, 9).stream().filter(ingredient -> !ingredient.equals("Blank")).toList();
-            final var description = TextTransformers.DESCRIPTION.transform(vial.get(9));
+            final var description = TextTransformers.SENTENCE.transform(vial.get(9));
             final var x10 = Integer.parseInt(vial.get(10));
             final var bonus = vial.get(11);
 
@@ -65,7 +65,7 @@ public class AlchemyDescriptionParser extends DataTableParser<List<List<List<Str
             final var x3 = Integer.parseInt(item.get(3));
             final var x4 = Double.parseDouble(item.get(4));
             final var cost = item.subList(5, 9).stream().filter(costItem -> !costItem.equals("Blank")).toList();
-            final var description = TextTransformers.DESCRIPTION.transform(item.get(9));
+            final var description = TextTransformers.SENTENCE.transform(item.get(9));
             final var x10 = Integer.parseInt(item.get(10));
             final var x11 = Integer.parseInt(item.get(11));
             final var x12 = Integer.parseInt(item.get(12));

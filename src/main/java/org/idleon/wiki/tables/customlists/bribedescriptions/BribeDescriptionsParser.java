@@ -17,7 +17,7 @@ public class BribeDescriptionsParser extends DataTableParser<List<List<String>>,
     protected BribeDescriptionsTable parseData(@NonNull List<List<String>> input) {
         return new BribeDescriptionsTable(input.stream().map(bribe -> {
             final var name = TextTransformers.TITLE.transform(bribe.get(0));
-            final var description = TextTransformers.DESCRIPTION.transform(bribe.get(1));
+            final var description = TextTransformers.SENTENCE.transform(bribe.get(1));
             final var cost = new BigDecimal(bribe.get(2)).toBigInteger();
             final var x3 = bribe.get(3);
             final var bonusKey = bribe.get(4);

@@ -14,7 +14,7 @@ public class ChatboxMapRandomsParser extends DataTableParser<List<List<String>>,
 
     @Override
     protected ChatboxMapRandomsTable parseData(@NonNull List<List<String>> input) {
-        return new ChatboxMapRandomsTable(input.getFirst().stream().map(TextTransformers.DESCRIPTION::transform).toList());
+        return new ChatboxMapRandomsTable(input.getFirst().stream().map(TextTransformers.SENTENCE::transform).toList());
     }
 
 }
