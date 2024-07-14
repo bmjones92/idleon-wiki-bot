@@ -63,7 +63,7 @@ public class TextTransformer {
     public String transform(@NonNull String text) {
         if (addSpaces) {
             // Replace all underscores and vertical pipes with spaces.
-            text = text.replaceAll("[_|]", " ");
+            text = text.replaceAll("_", " ");
             // Remove extra spaces.
             text = text.trim().replaceAll(" +", " ");
         }

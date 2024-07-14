@@ -3,6 +3,7 @@ package org.idleon.wiki.util;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.List;
+import java.util.Set;
 
 public record LavaMathFunc(
         @NonNull LavaMathFuncName name,
@@ -10,12 +11,22 @@ public record LavaMathFunc(
         double arg2
 ) {
 
+    private static final Set<String> NULL_NAMES = Set.of("_", "txt");
+
     enum LavaMathFuncName {
         Add,
+        AddLower,
         BigBase,
+        BigBaseLower,
         Decay,
+        DecayLower,
         DecayMulti,
-        IntervalAdd;
+        DecayMultiLower,
+        IntervalAdd,
+        IntervalAddLower,
+        Reduce,
+        ReduceLower,
+        PtsSpentOnGuildBonus;
 
         public static LavaMathFuncName fromString(@NonNull String name) {
             return switch (name) {
@@ -24,6 +35,7 @@ public record LavaMathFunc(
                 case "decay" -> Decay;
                 case "decayMulti" -> DecayMulti;
                 case "intervalAdd" -> IntervalAdd;
+                case "reduce" -> Reduce;
                 default -> throw new IllegalStateException("Unexpected math function: " + name);
             };
         }
@@ -52,7 +64,7 @@ public record LavaMathFunc(
      */
     public static LavaMathFunc parse(List<String> args, int startOffset) {
         final var name = args.get(startOffset + 2);
-        if (name.equals("txt")) {
+        if (NULL_NAMES.contains(name)) {
             return null;
         }
         return new LavaMathFunc(
