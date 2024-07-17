@@ -2,7 +2,7 @@ package org.idleon.wiki.tables.customlists.cauldronp2wbonuses;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.tables.GameTable;
-import org.idleon.wiki.util.LavaMathFunc;
+import org.idleon.wiki.tables.common.LavaMathFunc;
 
 public record CauldronP2WBonusesTable(
         @NonNull Cauldrons cauldrons,

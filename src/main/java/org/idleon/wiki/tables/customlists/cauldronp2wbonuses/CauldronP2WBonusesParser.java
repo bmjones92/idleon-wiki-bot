@@ -5,7 +5,7 @@ import org.idleon.wiki.parser.DataTableParser;
 import org.idleon.wiki.tables.customlists.cauldronp2wbonuses.CauldronP2WBonusesTable.Cauldrons;
 import org.idleon.wiki.tables.customlists.cauldronp2wbonuses.CauldronP2WBonusesTable.Liquids;
 import org.idleon.wiki.tables.customlists.cauldronp2wbonuses.CauldronP2WBonusesTable.Vials;
-import org.idleon.wiki.util.LavaMathFunc;
+import org.idleon.wiki.tables.common.LavaMathFunc;
 
 import java.util.List;
 

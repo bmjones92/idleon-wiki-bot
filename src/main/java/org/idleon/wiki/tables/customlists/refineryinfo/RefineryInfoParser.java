@@ -3,7 +3,7 @@ package org.idleon.wiki.tables.customlists.refineryinfo;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.parser.DataTableParser;
 import org.idleon.wiki.tables.customlists.refineryinfo.RefineryInfoTable.RefineryInfo;
-import org.idleon.wiki.util.ItemQuantityPair;
+import org.idleon.wiki.tables.common.ItemQuantityPair;
 
 import java.util.ArrayList;
 import java.util.List;

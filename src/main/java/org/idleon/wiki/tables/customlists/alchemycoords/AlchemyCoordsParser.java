@@ -2,10 +2,9 @@ package org.idleon.wiki.tables.customlists.alchemycoords;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.parser.DataTableParser;
+import org.idleon.wiki.tables.common.Coordinate;
 
 import java.util.List;
-
-import static org.idleon.wiki.tables.customlists.alchemycoords.AlchemyCoordsTable.AlchemyCoordinate;
 
 /**
  * Table parser implementation for the AlchemyCoords table.
@@ -33,7 +32,7 @@ public class AlchemyCoordsParser extends DataTableParser<List<List<List<Integer>
      * @param cauldron The cauldron to parse.
      * @return The list of parsed AlchemyCoordinates.
      */
-    private List<AlchemyCoordinate> parseCauldron(@NonNull List<List<Integer>> cauldron) {
+    private List<Coordinate> parseCauldron(@NonNull List<List<Integer>> cauldron) {
         return cauldron.stream().map(this::parseBubble).toList();
     }
 
@@ -42,8 +41,8 @@ public class AlchemyCoordsParser extends DataTableParser<List<List<List<Integer>
      * @param bubble The bubble to parse.
      * @return The parsed AlchemyCoordinate.
      */
-    private AlchemyCoordinate parseBubble(@NonNull List<Integer> bubble) {
-        return new AlchemyCoordinate(bubble.get(0), bubble.get(1));
+    private Coordinate parseBubble(@NonNull List<Integer> bubble) {
+        return new Coordinate(bubble.get(0), bubble.get(1));
     }
 
 }

@@ -3,7 +3,7 @@ package org.idleon.wiki.tables.customlists.classfamilybonuses;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.idleon.wiki.tables.ArrayGameTable;
-import org.idleon.wiki.util.LavaMathFunc;
+import org.idleon.wiki.tables.common.LavaMathFunc;
 
 import java.util.Collection;
 

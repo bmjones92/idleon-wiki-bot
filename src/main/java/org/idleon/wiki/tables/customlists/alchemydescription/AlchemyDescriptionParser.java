@@ -6,8 +6,8 @@ import org.idleon.wiki.parser.transformer.TextTransformers;
 import org.idleon.wiki.tables.customlists.alchemydescription.AlchemyDescriptionTable.AlchemyBubble;
 import org.idleon.wiki.tables.customlists.alchemydescription.AlchemyDescriptionTable.AlchemyShopItem;
 import org.idleon.wiki.tables.customlists.alchemydescription.AlchemyDescriptionTable.AlchemyVial;
-import org.idleon.wiki.util.ItemQuantityPair;
-import org.idleon.wiki.util.LavaMathFunc;
+import org.idleon.wiki.tables.common.ItemQuantityPair;
+import org.idleon.wiki.tables.common.LavaMathFunc;
 
 import java.util.ArrayList;
 import java.util.List;

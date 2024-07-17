@@ -1,7 +1,7 @@
 package org.idleon.wiki.tables.customlists.alchemydescription;
 
-import org.idleon.wiki.util.ItemQuantityPair;
-import org.idleon.wiki.util.LavaMathFunc;
+import org.idleon.wiki.tables.common.ItemQuantityPair;
+import org.idleon.wiki.tables.common.LavaMathFunc;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.tables.GameTable;
 

@@ -2,7 +2,7 @@ package org.idleon.wiki.tables.customlists.itemtocraftcosttype;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.tables.ArrayGameTable;
-import org.idleon.wiki.util.ItemQuantityPair;
+import org.idleon.wiki.tables.common.ItemQuantityPair;
 
 import java.util.Collection;
 import java.util.List;

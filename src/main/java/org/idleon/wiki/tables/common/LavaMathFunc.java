@@ -1,4 +1,4 @@
-package org.idleon.wiki.util;
+package org.idleon.wiki.tables.common;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 

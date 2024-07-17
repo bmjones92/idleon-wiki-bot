@@ -4,7 +4,7 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.parser.DataTableParser;
 import org.idleon.wiki.parser.transformer.TextTransformers;
 import org.idleon.wiki.tables.customlists.talentdescriptions.TalentDescriptionsTable.TalentDescription;
-import org.idleon.wiki.util.LavaMathFunc;
+import org.idleon.wiki.tables.common.LavaMathFunc;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,6 +2,7 @@ package org.idleon.wiki.tables.customlists.alchemycoords;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.tables.GameTable;
+import org.idleon.wiki.tables.common.Coordinate;
 
 import java.util.List;
 
@@ -13,12 +14,8 @@ import java.util.List;
  * @param luk The list of bubbles in the luck cauldron.
  */
 public record AlchemyCoordsTable(
-        @NonNull List<AlchemyCoordinate> str,
-        @NonNull List<AlchemyCoordinate> agi,
-        @NonNull List<AlchemyCoordinate> wis,
-        @NonNull List<AlchemyCoordinate> luk
-) implements GameTable {
-
-    public record AlchemyCoordinate(int x, int y) {}
-
-}
+        @NonNull List<Coordinate> str,
+        @NonNull List<Coordinate> agi,
+        @NonNull List<Coordinate> wis,
+        @NonNull List<Coordinate> luk
+) implements GameTable {}
