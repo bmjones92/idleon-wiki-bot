@@ -11,12 +11,12 @@ import java.util.List;
 public class DungeonPlatformParser extends DataTableParser<List<List<String>>, DungeonPlatformsTable> {
 
     public DungeonPlatformParser() {
-        super("scripts.CustomLists2", "DungeonPlatforms");
+        super("scripts.CustomLists2", "DungPlatforms");
     }
 
     @Override
     protected DungeonPlatformsTable parseData(@NonNull List<List<String>> input) {
-        return null;
+        return new DungeonPlatformsTable(input.stream().map(this::parseDungeonPlatform).toList());
     }
 
     private DungeonPlatform parseDungeonPlatform(@NonNull List<String> platform) {
