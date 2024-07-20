@@ -32,11 +32,14 @@ public class DungeonPlatformParser extends DataTableParser<List<List<String>>, D
     }
 
     private List<Integer> parseList(@NonNull String line) {
-        return Arrays.stream(line.split(",")).map(Integer::parseInt).toList();
+        // Some elements include whitespace characters, which JavaScript automatically removes when converting
+        // to an integer. We need to manually remove these characters with Java.
+        final var tokens = line.replaceAll("\\s", "").split(",");
+        return Arrays.stream(tokens).map(Integer::parseInt).toList();
     }
 
     private List<List<Integer>> parseNestedList(@NonNull String line) {
-        return Arrays.stream(line.split(";")).map(this::parseList).toList();
+        return Arrays.stream(line.split(";")).filter(String::isEmpty).map(this::parseList).toList();
     }
 
 }
