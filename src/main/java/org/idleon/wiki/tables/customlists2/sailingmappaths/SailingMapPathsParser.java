@@ -2,7 +2,7 @@ package org.idleon.wiki.tables.customlists2.sailingmappaths;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.parser.DataTableParser;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ public class SailingMapPathsParser extends DataTableParser<List<List<List<Intege
         return new SailingMapPathsTable(input.stream().map(this::parsePath).toList());
     }
 
-    private List<Coordinate> parsePath(@NonNull List<List<Integer>> input) {
+    private List<Position> parsePath(@NonNull List<List<Integer>> input) {
         return input.stream()
-                .map(coordinate -> new Coordinate(coordinate.get(0), coordinate.get(1)))
+                .map(coordinate -> new Position(coordinate.get(0), coordinate.get(1)))
                 .toList();
     }
 

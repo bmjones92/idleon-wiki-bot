@@ -9,7 +9,6 @@ import java.nio.file.Path;
 
 /**
  * Script parsers are responsible for fetching and processing game script data.
- * @author Brendan Jones
  * @param <T> The resulting table.
  */
 public interface TableParser<T extends GameTable> {

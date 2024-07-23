@@ -2,7 +2,7 @@ package org.idleon.wiki.tables.customlists2.summonupg;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.tables.ArrayGameTable;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 
 import java.util.Collection;
 
@@ -13,7 +13,7 @@ public class SummonUpgradeTable extends ArrayGameTable<SummonUpgradeTable.Summon
     }
 
     public record SummonUpgrade(
-            @NonNull Coordinate position,
+            @NonNull Position position,
             int color,
             @NonNull String name,
             int x4,

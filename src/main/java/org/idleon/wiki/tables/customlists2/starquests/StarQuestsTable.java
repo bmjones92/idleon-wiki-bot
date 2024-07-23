@@ -2,7 +2,7 @@ package org.idleon.wiki.tables.customlists2.starquests;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.tables.ArrayGameTable;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 
 import java.util.Collection;
 
@@ -14,7 +14,7 @@ public class StarQuestsTable extends ArrayGameTable<StarQuestsTable.StarQuest> {
 
     public record StarQuest(
             int mapId,
-            @NonNull Coordinate position,
+            @NonNull Position position,
             int magnitude,
             int x4,
             int numPlayers,

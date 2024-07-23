@@ -3,7 +3,7 @@ package org.idleon.wiki.tables.customlists2.summonupg;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.parser.DataTableParser;
 import org.idleon.wiki.parser.transformer.TextTransformers;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 import org.idleon.wiki.tables.customlists2.summonupg.SummonUpgradeTable.SummonUpgrade;
 
 import java.util.List;
@@ -33,10 +33,10 @@ public class SummonUpgradeParser extends DataTableParser<List<List<String>>, Sum
         return new SummonUpgrade(position, color, name, x4, x5, x6, x7, maxLevel, x9, description);
     }
 
-    private Coordinate parsePosition(@NonNull List<String> input) {
+    private Position parsePosition(@NonNull List<String> input) {
         final var x = Integer.parseInt(input.get(0));
         final var y = Integer.parseInt(input.get(1));
-        return new Coordinate(x, y);
+        return new Position(x, y);
     }
 
 }

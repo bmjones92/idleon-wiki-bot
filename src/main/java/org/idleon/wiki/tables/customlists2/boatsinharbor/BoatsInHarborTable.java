@@ -2,13 +2,13 @@ package org.idleon.wiki.tables.customlists2.boatsinharbor;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.tables.ArrayGameTable;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 
 import java.util.Collection;
 
-public class BoatsInHarborTable extends ArrayGameTable<Coordinate> {
+public class BoatsInHarborTable extends ArrayGameTable<Position> {
 
-    public BoatsInHarborTable(@NonNull Collection<Coordinate> items) {
+    public BoatsInHarborTable(@NonNull Collection<Position> items) {
         super(items);
     }
 

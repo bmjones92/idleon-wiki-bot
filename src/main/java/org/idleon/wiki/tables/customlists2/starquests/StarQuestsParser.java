@@ -3,7 +3,7 @@ package org.idleon.wiki.tables.customlists2.starquests;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.parser.DataTableParser;
 import org.idleon.wiki.parser.transformer.TextTransformers;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 import org.idleon.wiki.tables.customlists2.starquests.StarQuestsTable.StarQuest;
 
 import java.util.List;
@@ -38,10 +38,10 @@ public class StarQuestsParser extends DataTableParser<List<List<String>>, StarQu
         return new StarQuest(mapId, location, magnitude, x4, numPlayers, points, description, type);
     }
 
-    private Coordinate parseCoordinate(@NonNull List<String> input) {
+    private Position parseCoordinate(@NonNull List<String> input) {
         final var x = Integer.parseInt(input.get(1));
         final var y = Integer.parseInt(input.get(2));
-        return new Coordinate(x, y);
+        return new Position(x, y);
     }
 
 }

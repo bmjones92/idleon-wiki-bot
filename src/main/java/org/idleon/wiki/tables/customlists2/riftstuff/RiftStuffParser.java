@@ -3,7 +3,7 @@ package org.idleon.wiki.tables.customlists2.riftstuff;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.parser.DataTableParser;
 import org.idleon.wiki.parser.transformer.TextTransformers;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 import org.idleon.wiki.tables.customlists2.riftstuff.RiftStuffTable.RiftBonus;
 import org.idleon.wiki.tables.customlists2.riftstuff.RiftStuffTable.RiftTask;
 import org.idleon.wiki.tables.customlists2.riftstuff.RiftStuffTable.RiftWave;
@@ -76,7 +76,7 @@ public class RiftStuffParser extends DataTableParser<List<List<String>>, RiftStu
         final var x = Integer.parseInt(input.get(0));
         final var y = Integer.parseInt(input.get(1));
         final var name = TextTransformers.SPACES.transform(input.get(2));
-        return new RiftBonus(name, new Coordinate(x, y));
+        return new RiftBonus(name, new Position(x, y));
     }
 
     private List<RiftWave> parseWaves(@NonNull List<List<String>> input) {

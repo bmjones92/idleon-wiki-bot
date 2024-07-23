@@ -15,7 +15,6 @@ import java.nio.file.Paths;
  * @param projectName The internal project name of the game.
  * @param exportDirectory The root directory to place exported tables.
  * @param isHeadless Whether the scraper should be launched in headless mode.
- * @author Brendan Jones
  */
 public record AppConfig(
         @NonNull String baseURL,

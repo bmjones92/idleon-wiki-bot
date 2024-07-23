@@ -10,6 +10,9 @@ import java.util.Map;
 
 public class TableParserRegistry extends Registry<TableParser<?>> {
 
+    /**
+     * Map of table types to their parser instance.
+     */
     private final Map<Class<?>, TableParser<?>> typeToParserMap = new HashMap<>();
 
     @Override

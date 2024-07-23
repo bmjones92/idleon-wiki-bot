@@ -71,10 +71,6 @@ public record AlchemyDescriptionTable(
      * @param cost
      * @param description
      * @param x10
-     * @param x11
-     * @param x12
-     * @param x13
-     * @param x14
      * @param x15
      * @param x16
      */
@@ -84,13 +80,9 @@ public record AlchemyDescriptionTable(
             int x2,
             int x3,
             double x4,
-            @NonNull List<String> cost,
+            @NonNull List<ItemQuantityPair> cost,
             @NonNull String description,
             int x10,
-            int x11,
-            int x12,
-            int x13,
-            int x14,
             int x15,
             int x16
     ) {}

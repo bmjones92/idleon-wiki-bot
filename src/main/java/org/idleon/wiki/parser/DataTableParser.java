@@ -11,7 +11,6 @@ import java.nio.file.Paths;
  * A {@code DataTableParser} is responsible for loading data table scripts from the game code.
  * @param <S> The raw data type.
  * @param <T> The parsed data type.
- * @author Brendan Jones
  */
 public abstract class DataTableParser<S, T extends GameTable> implements TableParser<T> {
 

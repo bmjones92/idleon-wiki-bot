@@ -15,31 +15,52 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * A GameScraper is responsible for fetching and scraping.
+ * A GameScraper is responsible for fetching and scraping data from the game code.
  */
 public class GameScraper implements AutoCloseable {
 
+    /**
+     * Cache for tracking already parsed game tables.
+     */
     private final Map<Class<?>, GameTable> tables = new HashMap<>();
 
+    /**
+     * The application configuration.
+     */
     private final AppConfig config;
 
+    /**
+     * The playwright instance.
+     */
     private final Playwright playwright;
 
+    /**
+     * The browser instance.
+     */
     private final Browser browser;
 
+    /**
+     * The page instance.
+     */
     private final Page page;
 
+    /**
+     * Creates a new GameScraper instance.
+     * @param config The application configuration.
+     */
     public GameScraper(@NonNull AppConfig config) {
         this.config = config;
         this.playwright = Playwright.create();
         this.browser = playwright.chromium().launch(createLaunchOptions());
         this.page = browser.newPage();
 
+        // Intercept requests for the game script and patch it.
         page.route(config.getScriptURL(), route -> {
             final var script = patchGameScript(config.getScriptURL());
             route.fulfill(new Route.FulfillOptions().setBody(script));
         });
 
+        // Navigate to the game page to kick off loading.
         page.navigate(config.baseURL(), new Page.NavigateOptions().setWaitUntil(WaitUntilState.DOMCONTENTLOADED));
     }
 

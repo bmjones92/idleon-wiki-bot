@@ -2,7 +2,7 @@ package org.idleon.wiki.tables.customlists2.riftstuff;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.tables.GameTable;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public record RiftStuffTable(
 
     public record RiftBonus(
             @NonNull String name,
-            @NonNull Coordinate position
+            @NonNull Position position
     ) {}
 
     public record RiftWave(

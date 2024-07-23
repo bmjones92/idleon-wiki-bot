@@ -2,7 +2,7 @@ package org.idleon.wiki.tables.customlists2.boatsinharbor;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.idleon.wiki.parser.DataTableParser;
-import org.idleon.wiki.tables.common.Coordinate;
+import org.idleon.wiki.tables.common.Position;
 
 import java.util.List;
 
@@ -17,8 +17,8 @@ public class BoatsInHarborParser extends DataTableParser<List<List<Integer>>, Bo
         return new BoatsInHarborTable(input.stream().map(this::parseCoordinate).toList());
     }
 
-    private Coordinate parseCoordinate(@NonNull List<Integer> parser) {
-        return new Coordinate(parser.get(0), parser.get(1));
+    private Position parseCoordinate(@NonNull List<Integer> parser) {
+        return new Position(parser.get(0), parser.get(1));
     }
 
 }

@@ -13,7 +13,6 @@ import java.util.Map;
 /**
  * A registry tracks a set of classes which are loaded and instantiated automatically.
  * @param <T> The type of class stored in this registry.
- * @author Brendan Jones
  */
 public abstract class Registry<T> {
 
