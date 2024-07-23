@@ -15,7 +15,7 @@ public class ShrineInfoTable extends ArrayGameTable<ShrineInfoTable.ShrineInfo> 
         @NonNull String name,
         @NonNull String description,
         int baseBonus,
-        int bonusPerLevel,
+        double bonusPerLevel,
         int x4
     ) {}
 

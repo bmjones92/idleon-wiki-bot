@@ -23,7 +23,7 @@ public class ShrineInfoParser extends DataTableParser<List<List<String>>, Shrine
         final var name = TextTransformers.SPACES.transform(input.get(0));
         final var description = TextTransformers.SPACES.transform(input.get(1));
         final var baseBonus = Integer.parseInt(input.get(2));
-        final var bonusPerLevel = Integer.parseInt(input.get(3));
+        final var bonusPerLevel = Double.parseDouble(input.get(3));
         final var x4 = Integer.parseInt(input.get(4));
         return new ShrineInfo(name, description, baseBonus, bonusPerLevel, x4);
     }
