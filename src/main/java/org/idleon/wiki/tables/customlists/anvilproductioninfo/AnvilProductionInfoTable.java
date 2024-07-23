@@ -13,7 +13,7 @@ public class AnvilProductionInfoTable extends ArrayGameTable<AnvilProductionInfo
 
     /**
      * Describes a single anvil production item.
-     * @param item The internal name of the item.
+     * @param item The internal material of the item.
      * @param work The amount of work required to produce the item.
      * @param levelRequirement The level requirement for producing the item.
      * @param baseExperience The base experience granted for producing the item.

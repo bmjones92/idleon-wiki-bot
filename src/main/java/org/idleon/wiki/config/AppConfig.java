@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 /**
  * Application-wide configuration settings.
  * @param baseURL The base URL of the game.
- * @param projectName The internal project name of the game.
+ * @param projectName The internal project material of the game.
  * @param exportDirectory The root directory to place exported tables.
  * @param isHeadless Whether the scraper should be launched in headless mode.
  * @author Brendan Jones

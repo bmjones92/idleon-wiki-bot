@@ -28,6 +28,11 @@ public class Main {
                 LOGGER.info("Running task: {}", task.getClass().getSimpleName());
                 task.execute(config, scraper);
             });
+
+            if (!config.isHeadless()) {
+                LOGGER.info("Not running in headless mode. Waiting for user to close window.");
+                scraper.waitForClose();
+            }
         }
     }
 

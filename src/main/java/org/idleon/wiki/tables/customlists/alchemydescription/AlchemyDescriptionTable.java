@@ -27,12 +27,12 @@ public record AlchemyDescriptionTable(
 
     /**
      * Describes an alchemy bubble.
-     * @param name The name of the bubble.
+     * @param name The material of the bubble.
      * @param func The effect scaling function.
      * @param materials The list of materials required to upgrade this bubble.
      * @param description The human-readable description.
      * @param isEquippable Whether the bubble is a large equippable bubble.
-     * @param bonus The internal name for the bonusKey granted by this bubble.
+     * @param bonus The internal material for the bonusKey granted by this bubble.
      */
     public record AlchemyBubble(
             @NonNull String name,
@@ -45,12 +45,12 @@ public record AlchemyDescriptionTable(
 
     /**
      * Describes an alchemy vial.
-     * @param name The name of the vial.
+     * @param name The material of the vial.
      * @param func The effect scaling function.
      * @param ingredients The list of ingredients required to upgrade this vial.
      * @param description The human-readable description of the vial.
      * @param x10 Unknown
-     * @param bonus The internal name for the bonusKey granted by this vial.
+     * @param bonus The internal material for the bonusKey granted by this vial.
      */
     public record AlchemyVial(
             @NonNull String name,
@@ -63,7 +63,7 @@ public record AlchemyDescriptionTable(
 
     /**
      * Describes an item in the alchemy shop.
-     * @param name The name of the item.
+     * @param name The material of the item.
      * @param x1
      * @param x2
      * @param x3

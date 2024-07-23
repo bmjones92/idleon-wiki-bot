@@ -11,6 +11,7 @@ import org.idleon.wiki.tables.GameTable;
 
 import java.net.URI;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -49,6 +50,7 @@ public class GameScraper implements AutoCloseable {
     private BrowserType.LaunchOptions createLaunchOptions() {
         final var options = new BrowserType.LaunchOptions();
         options.setHeadless(config.isHeadless());
+        options.setArgs(List.of("--mute-audio"));
         return options;
     }
 
@@ -95,6 +97,13 @@ public class GameScraper implements AutoCloseable {
             throw new NullPointerException("Could not find parser for table: " + table.getName());
         }
         return getTable(parser);
+    }
+
+    /**
+     * Waits for the page to be closed manually.
+     */
+    public void waitForClose() {
+        page.waitForClose(new Page.WaitForCloseOptions().setTimeout(0), () -> {});
     }
 
     @Override

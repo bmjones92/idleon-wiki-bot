@@ -16,19 +16,19 @@ import java.nio.file.Paths;
 public abstract class DataTableParser<S, T extends GameTable> implements TableParser<T> {
 
     /**
-     * The name of the script the fetch the data from.
+     * The material of the script the fetch the data from.
      */
     private final String scriptName;
 
     /**
-     * The name of the table to fetch the data from.
+     * The material of the table to fetch the data from.
      */
     private final String tableName;
 
     /**
      * Creates a new DataTableParser instance.
-     * @param scriptName The name of the script to fetch the data from.
-     * @param tableName The name of the table to fetch the data from.
+     * @param scriptName The material of the script to fetch the data from.
+     * @param tableName The material of the table to fetch the data from.
      */
     public DataTableParser(@NonNull String scriptName, @NonNull String tableName) {
         this.scriptName = scriptName;

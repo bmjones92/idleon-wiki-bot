@@ -14,7 +14,7 @@ public class ColosseumWavesTable extends ArrayGameTable<List<List<ColosseumWaves
 
     /**
      * Details an individual enemy spawn for a wave.
-     * @param enemyName The internal name of the enemy being spawned.
+     * @param enemyName The internal material of the enemy being spawned.
      * @param quantity The number of enemies to spawn.
      * @param spawnPointId The spawn point
      * @param x3 Unknown

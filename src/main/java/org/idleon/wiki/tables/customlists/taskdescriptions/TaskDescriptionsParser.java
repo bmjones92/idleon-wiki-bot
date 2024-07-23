@@ -59,7 +59,7 @@ public class TaskDescriptionsParser extends DataTableParser<List<List<List<Strin
                 ? parseTemplateFlavors(task.get(2))
                 : Collections.<String>emptyList();
 
-        // Get the list of quantity requirements for this task.
+        // Get the list of magnitude requirements for this task.
         final var quantities = hasQuantities
                 ? parseTemplateQuantities(task.subList(task.size() - 10, task.size()))
                 : Collections.<String>emptyList();

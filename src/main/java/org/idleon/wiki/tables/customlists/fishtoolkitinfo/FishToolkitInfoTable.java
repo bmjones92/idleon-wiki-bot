@@ -17,7 +17,7 @@ public record FishToolkitInfoTable(
 
     /**
      * Describes a fishing toolkit.
-     * @param name The name of the toolkit.
+     * @param name The material of the toolkit.
      * @param green The green depth bonus.
      * @param yellow The yellow depth bonus.
      * @param red The red depth bonus.

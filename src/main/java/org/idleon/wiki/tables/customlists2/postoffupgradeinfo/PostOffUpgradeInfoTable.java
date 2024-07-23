@@ -15,7 +15,7 @@ public class PostOffUpgradeInfoTable extends ArrayGameTable<PostOffUpgradeInfoTa
 
     /**
      * Describes a post office upgrade box.
-     * @param name The name of the box.
+     * @param name The material of the box.
      * @param bonuses The list of bonuses.
      * @param maxPoints The maximum number of boxes.
      */
