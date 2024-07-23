@@ -12,7 +12,7 @@ public record GuildGPTasksTable(
 
     /**
      * Describes a guild GP task.
-     * @param name The human-readable material of the task.
+     * @param name The human-readable name of the task.
      * @param quantity The number of times the task needs to be completed.
      * @param points The number of GP awarded for completing the task.
      */

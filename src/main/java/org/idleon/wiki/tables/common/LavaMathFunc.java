@@ -47,7 +47,7 @@ public record LavaMathFunc(
 
     /**
      * Parses a lava math function from the arguments starting at index 0. The order of the arguments must be
-     * [arg1, arg2, material, ...].
+     * [arg1, arg2, name, ...].
      * @param args The list of arguments.
      * @return The parsed function, or null if an invalid function was provided.
      */
@@ -57,7 +57,7 @@ public record LavaMathFunc(
 
     /**
      * Parses a lava math function from the arguments starting from {@code startOffset}. The order of the arguments
-     * must be [..., arg1, arg2, material, ...].
+     * must be [..., arg1, arg2, name, ...].
      * @param args The list of arguments.
      * @param startOffset The offset of arg1.
      * @return The parsed function, or null if an invalid function was provided.

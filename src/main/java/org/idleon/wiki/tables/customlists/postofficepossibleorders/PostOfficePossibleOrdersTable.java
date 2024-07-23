@@ -26,7 +26,7 @@ public class PostOfficePossibleOrdersTable extends ArrayGameTable<PostOfficePoss
 
     /**
      * Describes a request made by a post office carrier.
-     * @param item The material of the requested item.
+     * @param item The name of the requested item.
      * @param baseQuantity The base magnitude.
      * @param x2 Unknown, probably some form of costScalar.
      */
